@@ -1,4 +1,3 @@
-<!-- ... existing code ... -->
 <!DOCTYPE html>
 <html lang="pl" class="scroll-smooth">
 <head>
@@ -7,20 +6,20 @@
     <title>Promirbud | Izolacje PUR i Powłoki Polimocznikowe Świętokrzyskie</title>
     
     <!-- SEO Meta Tagi -->
-    <meta name="description" content="Profesjonalne izolacje pianą PUR i powłoki polimocznikowe w województwie świętokrzyskim. Wykorzystujemy najwyższej klasy sprzęt Komatz Hercules do ocieplania poddaszy, dachów i hydroizolacji. Darmowa wycena!">
+    <meta name="description" content="Profesjonalne izolacje pianą PUR i powłoki polimocznikowe w województwie świętokrzyskim. Wykorzystujemy sprzęt Komatz Hercules do ocieplania poddaszy, dachów i hydroizolacji. Sprawdź kalkulator!">
     <meta name="keywords" content="piana PUR, polimocznik, ocieplanie poddasza, hydroizolacja, świętokrzyskie, Kielce, Starachowice, Skarżysko-Kamienna, Ostrowiec, Komatz Hercules, izolacje natryskowe, Promirbud">
     <meta name="author" content="Promirbud">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://promirbud.eu/">
     
-    <!-- Open Graph (Dla mediów społecznościowych) -->
+    <!-- Open Graph (Media społecznościowe) -->
     <meta property="og:title" content="Promirbud - Profesjonalne Izolacje PUR i Polimocznik">
-    <meta property="og:description" content="Zabezpiecz swój budynek przed utratą ciepła i przeciekami. Błyskawiczna realizacja na terenie woj. świętokrzyskiego i sprzęt klasy premium.">
+    <meta property="og:description" content="Zabezpiecz swój budynek przed utratą ciepła i przeciekami. Błyskawiczna realizacja w woj. świętokrzyskim.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://promirbud.eu/">
     <meta property="og:locale" content="pl_PL">
 
-    <!-- Schema.org / JSON-LD dla Lokalnego Biznesu (Kluczowe dla lokalnego SEO) -->
+    <!-- Schema.org / JSON-LD dla Lokalnego Biznesu -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -28,7 +27,7 @@
       "name": "Promirbud - Izolacje Natryskowe PUR i Polimocznik",
       "url": "https://promirbud.eu",
       "email": "bok@promirbud.eu",
-      "description": "Profesjonalne usługi ocieplania poddaszy, izolacji fundamentów pianą PUR oraz hydroizolacji dachów polimocznikiem. Realizacje na maszynach Komatz Hercules.",
+      "description": "Profesjonalne usługi ocieplania poddaszy, izolacji fundamentów pianą PUR oraz hydroizolacji dachów polimocznikiem w województwie świętokrzyskim.",
       "address": {
         "@type": "PostalAddress",
         "addressRegion": "świętokrzyskie",
@@ -45,102 +44,629 @@
     }
     </script>
 
-    <!-- Tailwind CSS -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-<!-- ... existing code ... -->
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Dodatkowe informacje (opcjonalnie)</label>
-                                <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all resize-none" placeholder="Np. termin realizacji, trudny dojazd..."></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
-                                Wyślij zapytanie o darmową wycenę
-                            </button>
-                            <p class="text-xs text-gray-500 text-center mt-4">Klikając "Wyślij", akceptujesz politykę prywatności i wyrażasz zgodę na kontakt mailowy w celu przedstawienia wyceny.</p>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-orange': '#f97316',
+                        'brand-blue': '#0284c7',
+                        'brand-dark': '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- Nawigacja -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-md z-50 shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo -->
+                <a href="#" class="text-2xl sm:text-3xl font-black text-brand-dark tracking-tighter flex items-center">
+                    <span class="text-brand-orange mr-1">PRO</span>MIRBUD
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#uslugi" class="text-gray-600 hover:text-brand-orange font-medium transition-colors">Usługi</a>
+                    <a href="#technologia" class="text-gray-600 hover:text-brand-orange font-medium transition-colors">Technologia</a>
+                    <a href="#kalkulator" class="text-gray-600 hover:text-brand-orange font-medium transition-colors">Kalkulator</a>
+                    <a href="#korzysci" class="text-gray-600 hover:text-brand-orange font-medium transition-colors">Dlaczego My</a>
+                    <a href="#kontakt" class="bg-brand-orange hover:bg-orange-600 text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Darmowa Wycena
+                    </a>
+                </nav>
+
+                <!-- Przycisk menu mobilnego -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" type="button" aria-label="Otwórz menu" class="text-gray-700 hover:text-brand-orange focus:outline-none p-2">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rozwijane Menu Mobilne -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#uslugi" class="block py-2 text-gray-700 font-semibold hover:text-brand-orange">Usługi</a>
+            <a href="#technologia" class="block py-2 text-gray-700 font-semibold hover:text-brand-orange">Technologia</a>
+            <a href="#kalkulator" class="block py-2 text-gray-700 font-semibold hover:text-brand-orange">Kalkulator Wyceny</a>
+            <a href="#korzysci" class="block py-2 text-gray-700 font-semibold hover:text-brand-orange">Dlaczego My</a>
+            <a href="#kontakt" class="block w-full text-center bg-brand-orange text-white py-3 rounded-xl font-bold mt-2">Darmowa Wycena</a>
+        </div>
+    </header>
+
+    <!-- Sekcja Hero -->
+    <section id="hero" class="hero-pattern min-h-screen flex items-center pt-28 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <div class="inline-flex items-center space-x-2 bg-brand-orange/20 border border-brand-orange/30 text-brand-orange px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+                        <span>Województwo Świętokrzyskie & Okolice</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
+                        Profesjonalne Izolacje <span class="text-brand-orange">PUR</span> i <span class="text-brand-blue">Polimocznik</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-lg sm:text-xl mb-8 leading-relaxed">
+                        Wykorzystujemy potężną technologię reaktorów <strong>Komatz Hercules</strong>. Zapewniamy całkowitą szczelność termiczną i hydroizolacyjną dla Twojego domu, firmy oraz rolnictwa.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="#kalkulator" class="bg-brand-orange hover:bg-orange-600 text-white font-extrabold text-center px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
+                            Oblicz Koszt W Kalkulatorze
+                        </a>
+                        <a href="#kontakt" class="bg-gray-800 hover:bg-gray-700 border border-gray-600 text-white font-bold text-center px-8 py-4 rounded-xl transition-all">
+                            Napisz Po Darmową Wycenę
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-gray-800 pt-6 text-xs sm:text-sm text-gray-400">
+                        <div class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Sprzęt Komatz Hercules</div>
+                        <div class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Bez Mostków Termicznych</div>
+                        <div class="flex items-center"><span class="text-brand-orange mr-2">✓</span> Dojazd i Audyt Gratis</div>
+                    </div>
+                </div>
+
+                <!-- Zdjęcie w sekcji hero -->
+                <div class="relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-orange to-brand-blue rounded-3xl blur opacity-30"></div>
+                    <div class="relative bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Izolacje natryskowe pianą PUR Komatz" class="w-full h-80 sm:h-96 object-cover opacity-85">
+                        <div class="p-6 bg-gray-900/90 backdrop-blur-sm border-t border-gray-800">
+                            <p class="text-sm font-bold text-white mb-1">Gwarancja najwyższej jakości natrysku</p>
+                            <p class="text-xs text-gray-400">Precyzyjne proporcje mieszania i optymalna temperatura dzięki maszynom przemysłowym Komatz.</p>
                         </div>
-                    </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Usługi -->
+    <section id="uslugi" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-orange font-semibold text-sm uppercase tracking-wider">Kompleksowa Oferta</span>
+                <h2 class="text-3xl md:text-4xl font-black mt-2 mb-4 text-brand-dark">Czym się zajmujemy?</h2>
+                <p class="text-gray-600 text-lg">Świadczymy usługi natryskowe dla domów jednorodzinnych, obiektów przemysłowych oraz budynków rolniczych w woj. świętokrzyskim.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Usługa 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-orange-100 text-brand-orange rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-brand-dark">Ocieplanie Poddaszy</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Eliminacja strat ciepła nawet do 40%. Piana otwartokomórkowa idealnie wypełnia wszelkie szczeliny w więźbie dachowej, tworząc spójną i oddychającą warstwę.
+                        </p>
+                    </div>
+                    <a href="#kalkulator" class="text-brand-orange font-bold text-sm inline-flex items-center hover:underline">Oblicz koszt poddasza &rarr;</a>
+                </div>
+
+                <!-- Usługa 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-sky-100 text-brand-blue rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-brand-dark">Izolacja Fundamentów</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Piana zamkniętokomórkowa o wysokiej gęstości tworzy twardą, hydroizolacyjną barierę. Chroni fundamenty przed wilgocią z gruntu oraz utratą ciepła.
+                        </p>
+                    </div>
+                    <a href="#kalkulator" class="text-brand-blue font-bold text-sm inline-flex items-center hover:underline">Sprawdź wycenę fundamentów &rarr;</a>
+                </div>
+
+                <!-- Usługa 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-slate-100 text-brand-dark rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-brand-dark">Hydroizolacja Polimocznikiem</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Bezszwowe powłoki zabezpieczające dachy płaskie, tarasy, baseny oraz posadzki. Polimocznik wysycha w kilka sekund i wytrzymuje skrajne warunki atmosferyczne.
+                        </p>
+                    </div>
+                    <a href="#kalkulator" class="text-brand-dark font-bold text-sm inline-flex items-center hover:underline">Oblicz polimocznik &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rozbudowana Stopka SEO (Footer) -->
-    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t border-gray-800">
+    <!-- Sekcja Technologia -->
+    <section id="technologia" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                
-                <!-- Kolumna 1: O firmie -->
-                <div>
-                    <a href="#" class="text-2xl font-black text-white tracking-tighter flex items-center mb-6">
-                        <span class="text-brand-orange mr-1">PRO</span>MIRBUD
-                    </a>
-                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
-                        Specjalizujemy się w nowoczesnych systemach izolacji natryskowych. Pracujemy na niezawodnych reaktorach <strong>Komatz Hercules</strong>, co gwarantuje najwyższą jakość i trwałość powłok.
-                    </p>
-                    <div class="flex items-center text-sm font-medium text-white bg-gray-800 rounded-lg p-3 inline-block">
-                        <svg class="w-5 h-5 text-brand-orange mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        bok@promirbud.eu
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider">Specyfikacja i Sprzęt</span>
+                <h2 class="text-3xl md:text-4xl font-black mt-2 mb-4 text-brand-dark">Poznaj naszą technologię</h2>
+                <p class="text-gray-600 text-lg">Sercem naszych prac jest profesjonalny agregat <strong>Komatz Hercules</strong>. Wybieramy wyłącznie sprawdzony materiał i dostosowujemy go do charakteru budynku.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Piana Otwartokomórkowa -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="bg-orange-100 text-brand-orange text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Termoizolacja Wewnętrzna</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Piana Otwartokomórkowa</h3>
+                        <ul class="space-y-4 text-sm text-gray-700">
+                            <li class="flex items-start"><span class="text-brand-orange font-bold mr-2">✓</span> <strong>Zastosowanie:</strong> Poddasza użytkowe, dachy skośne, stropy, ściany szkieletowe.</li>
+                            <li class="flex items-start"><span class="text-brand-orange font-bold mr-2">✓</span> <strong>Specyfika:</strong> Lekka, paro-przepuszczalna struktura. Pozwala konstrukcjom drewnianym "oddychać".</li>
+                            <li class="flex items-start"><span class="text-brand-orange font-bold mr-2">✓</span> <strong>Zalety:</strong> Doskonała izolacja akustyczna, brak osiadania po latach, pełne wyeliminowanie przedmuchów zimna.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Kolumna 2: Szybkie linki -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Nawigacja</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#hero" class="hover:text-brand-orange transition-colors">Strona Główna</a></li>
-                        <li><a href="#uslugi" class="hover:text-brand-orange transition-colors">Nasze Usługi</a></li>
-                        <li><a href="#technologia" class="hover:text-brand-orange transition-colors">Technologia Komatz</a></li>
-                        <li><a href="#kalkulator" class="hover:text-brand-orange transition-colors">Kalkulator Wyceny</a></li>
-                        <li><a href="#korzysci" class="hover:text-brand-orange transition-colors">Dlaczego My?</a></li>
-                        <li><a href="#kontakt" class="hover:text-brand-orange transition-colors">Darmowa Wycena</a></li>
-                    </ul>
-                </div>
-
-                <!-- Kolumna 3: Oferta SEO -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Nasza Oferta</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full mr-2"></span> Ocieplanie poddaszy PUR</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full mr-2"></span> Izolacja fundamentów</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full mr-2"></span> Hydroizolacja polimocznikiem</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full mr-2"></span> Naprawa dachów z papy</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full mr-2"></span> Izolacje dla rolnictwa (chłodnie)</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full mr-2"></span> Docieplenia hal przemysłowych</li>
-                    </ul>
-                </div>
-
-                <!-- Kolumna 4: Obszar działania SEO -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Obszar Działania</h4>
-                    <p class="text-sm text-gray-400 mb-4">
-                        Świadczymy usługi natryskowe na terenie całego województwa świętokrzyskiego oraz w okolicach. Dojazd na pomiar i wycenę gratis!
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">Kielce</span>
-                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">Starachowice</span>
-                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">Skarżysko-Kamienna</span>
-                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">Ostrowiec Św.</span>
-                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">Sandomierz</span>
-                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">Końskie</span>
-                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">Busko-Zdrój</span>
+                <!-- Piana Zamkniętokomórkowa -->
+                <div class="bg-brand-dark text-white rounded-3xl p-8 shadow-xl border border-gray-700 flex flex-col justify-between transform lg:-translate-y-2">
+                    <div>
+                        <span class="bg-blue-500/20 text-brand-blue text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block border border-blue-500/30">Ciężka Izolacja & Hydro</span>
+                        <h3 class="text-2xl font-bold mb-6">Piana Zamkniętokomórkowa</h3>
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-start"><span class="text-brand-blue font-bold mr-2">✓</span> <strong>Zastosowanie:</strong> Fundamenty, posadzki, dachy płaskie, hale przemysłowe i magazyny rolnicze.</li>
+                            <li class="flex items-start"><span class="text-brand-blue font-bold mr-2">✓</span> <strong>Specyfika:</strong> Ponad 90% zamkniętych komórek. Sztywna, nienasiąkliwa i bardzo wytrzymała.</li>
+                            <li class="flex items-start"><span class="text-brand-blue font-bold mr-2">✓</span> <strong>Zalety:</strong> Najniższy współczynnik przewodzenia ciepła, usztywnia budynek, blokuje wodę.</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- Tekst pod pozycjonowanie na sam dół (ukryty dla oka szybkiego czytelnika, widoczny dla Google) -->
-            <div class="border-t border-gray-800 pt-8 pb-4 text-xs text-gray-500 text-justify mb-4">
-                <h1 class="text-gray-400 font-bold mb-2">Profesjonalne izolacje natryskowe pianą PUR i hydroizolacje polimocznikiem w województwie świętokrzyskim</h1>
-                Firma Promirbud to ekspert w dziedzinie nowoczesnych systemów izolacyjnych. Oferujemy kompleksowe ocieplanie pianą poliuretanową (PUR) otwartokomórkową oraz zamkniętokomórkową. Nasze usługi obejmują termomodernizację budynków mieszkalnych, w tym ocieplanie poddaszy użytkowych, strychów, izolację ścian, posadzek oraz fundamentów. Dzięki zastosowaniu wysokociśnieniowych reaktorów marki Komatz Hercules, gwarantujemy idealną strukturę piany, pozbawioną mostków termicznych. Wykonujemy również natrysk polimocznika – najbardziej zaawansowanej na rynku hydroizolacji. Polimocznik doskonale sprawdza się przy renowacji dachów z papy, uszczelnianiu tarasów, basenów oraz zabezpieczaniu posadzek przemysłowych. Działamy mobilnie, obsługując miasta takie jak Kielce, Starachowice, Skarżysko-Kamienna, Ostrowiec Świętokrzyski i mniejsze miejscowości w regionie. Postaw na szczelność, energooszczędność i trwałość z Promirbud.
-            </div>
-
-            <!-- Prawa autorskie -->
-            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 mt-4">
-                <p>&copy; 2026 Promirbud. Wszelkie prawa zastrzeżone.</p>
-                <div class="mt-2 md:mt-0 space-x-4">
-                    <a href="#" class="hover:text-white transition-colors">Polityka Prywatności</a>
-                    <a href="#" class="hover:text-white transition-colors">Regulamin</a>
+                <!-- Polimocznik -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="bg-slate-200 text-gray-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Hydroizolacja Premium</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Powłoki Polimocznikowe</h3>
+                        <ul class="space-y-4 text-sm text-gray-700">
+                            <li class="flex items-start"><span class="text-brand-orange font-bold mr-2">✓</span> <strong>Zastosowanie:</strong> Renowacja dachów z papy, uszczelnianie tarasów, basenów, zbiorników i posadzek.</li>
+                            <li class="flex items-start"><span class="text-brand-orange font-bold mr-2">✓</span> <strong>Specyfika:</strong> Płynna membrana natryskiwana pod wysokim ciśnieniem. Wiąże w kilka sekund.</li>
+                            <li class="flex items-start"><span class="text-brand-orange font-bold mr-2">✓</span> <strong>Zalety:</strong> Ekstremalna odporność mechaniczna i chemiczna, brak jakichkolwiek łączeń, odporność na UV.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Sekcja Kalkulator -->
+    <section id="kalkulator" class="py-20 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-dark rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl text-white relative overflow-hidden">
+                
+                <div class="relative z-10">
+                    <div class="text-center mb-10">
+                        <span class="inline-block py-1 px-3 rounded-full bg-brand-orange/20 text-brand-orange font-semibold text-xs sm:text-sm mb-3 border border-brand-orange/30">
+                            Szybka Wykalkulowanie Szacunku
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-black mb-3">Kalkulator Wyceny</h2>
+                        <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">Wpisz metraż i wybierz opcję. Dla powierzchni od 90 m² system automatycznie doliczy rabat -5 zł/m² na pianę PUR!</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                        <!-- Wybór parametrów -->
+                        <div class="space-y-6">
+                            <!-- Input Metraż -->
+                            <div>
+                                <label for="calc-area" class="block text-sm font-semibold text-gray-300 mb-2">1. Powierzchnia natrysku (m²)</label>
+                                <div class="relative">
+                                    <input type="number" id="calc-area" oninput="updateCalc()" min="1" class="w-full px-5 py-3.5 rounded-xl border-2 border-gray-600 bg-gray-800 text-white focus:border-brand-orange focus:ring-0 outline-none transition-all text-xl font-bold" placeholder="np. 150">
+                                    <div class="absolute inset-y-0 right-0 pr-5 flex items-center pointer-events-none">
+                                        <span class="text-gray-400 font-bold">m²</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Wybór typu -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">2. Rodzaj izolacji / powłoki</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+                                    <button id="type-open" type="button" onclick="selectPurType('open')" class="type-btn bg-brand-orange border-2 border-brand-orange text-white rounded-xl py-2.5 px-3 text-xs sm:text-sm font-bold shadow-md transition-all">
+                                        Piana Otwartokomórkowa
+                                    </button>
+                                    <button id="type-closed" type="button" onclick="selectPurType('closed')" class="type-btn bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-2.5 px-3 text-xs sm:text-sm font-bold hover:border-brand-orange transition-all">
+                                        Piana Zamkniętokomórkowa
+                                    </button>
+                                </div>
+
+                                <!-- Wybór grubości dla piany -->
+                                <div id="thickness-box" class="grid grid-cols-4 gap-2 mb-3">
+                                    <button id="th-15" type="button" onclick="selectThickness(15)" class="th-btn bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-2.5 text-xs sm:text-sm font-bold hover:border-brand-orange transition-all">15 CM</button>
+                                    <button id="th-20" type="button" onclick="selectThickness(20)" class="th-btn bg-brand-orange border-2 border-brand-orange text-white rounded-xl py-2.5 text-xs sm:text-sm font-bold shadow-md transition-all">20 CM</button>
+                                    <button id="th-25" type="button" onclick="selectThickness(25)" class="th-btn bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-2.5 text-xs sm:text-sm font-bold hover:border-brand-orange transition-all">25 CM</button>
+                                    <button id="th-30" type="button" onclick="selectThickness(30)" class="th-btn bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-2.5 text-xs sm:text-sm font-bold hover:border-brand-orange transition-all">30 CM</button>
+                                </div>
+
+                                <!-- Polimocznik -->
+                                <button id="poly-btn" type="button" onclick="selectPoly()" class="w-full bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-3 text-xs sm:text-sm font-bold hover:border-brand-blue transition-all">
+                                    Opcja: Hydroizolacja Polimocznikiem (220 zł/m²)
+                                </button>
+                            </div>
+
+                            <!-- Informacja o rabacie -->
+                            <div id="rabat-info" class="hidden bg-green-500/10 border border-green-500/30 text-green-400 p-4 rounded-xl text-xs sm:text-sm items-center">
+                                <svg class="w-5 h-5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Rabat metrażowy aktywny!</strong> Stawka została obniżona o -5 zł/m².</span>
+                            </div>
+                        </div>
+
+                        <!-- Wynik -->
+                        <div class="bg-gray-800/80 p-6 sm:p-8 rounded-2xl border border-gray-700 text-center flex flex-col justify-center items-center">
+                            <span class="text-gray-400 text-sm font-medium mb-1">Szacunkowy koszt inwestycji (brutto, 8% VAT)</span>
+                            <span id="calc-result" class="text-4xl sm:text-5xl font-black text-brand-orange my-4">0 zł</span>
+                            
+                            <div class="bg-gray-900 px-4 py-2 rounded-full text-xs sm:text-sm text-gray-300 border border-gray-700 mb-4">
+                                Stawka jednostkowa: <strong id="calc-unit-price" class="text-white font-bold">---</strong>
+                            </div>
+
+                            <p class="text-xs text-gray-500 leading-relaxed">
+                                Podana kwota ma charakter orientacyjny. Ostateczną wycenę ustalamy po bezpłatnym pomiarze na budowie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Dlaczego My -->
+    <section id="korzysci" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-brand-dark mb-4">Dlaczego inwestorzy wybierają Promirbud?</h2>
+                <p class="text-gray-600">Postaw na solidność i lokalną firmę, która stawia na niezawodny sprzęt.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                    <div class="text-brand-orange text-3xl font-black mb-2">01</div>
+                    <h3 class="font-bold text-lg mb-2">Agregat Komatz</h3>
+                    <p class="text-gray-600 text-sm">Przemysłowe reaktory Komatz Hercules to pewność idealnych proporcji składników i idealnego spienienia.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                    <div class="text-brand-orange text-3xl font-black mb-2">02</div>
+                    <h3 class="font-bold text-lg mb-2">Certyfikowane materiały</h3>
+                    <p class="text-gray-600 text-sm">Stosujemy wyłącznie atestowane systemy poliuretanowe bezpieczne dla zdrowia domowników.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                    <div class="text-brand-orange text-3xl font-black mb-2">03</div>
+                    <h3 class="font-bold text-lg mb-2">Świętokrzyski dojazd</h3>
+                    <p class="text-gray-600 text-sm">Szybki czas reakcji i bezpłatne konsultacje na terenie całego województwa i okolic.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                    <div class="text-brand-orange text-3xl font-black mb-2">04</div>
+                    <h3 class="font-bold text-lg mb-2">Gwarancja i czystość</h3>
+                    <p class="text-gray-600 text-sm">Zabezpieczamy okna i przestrzeń budowy, zostawiając po sobie czysty i gotowy obiekt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Kontakt -->
+    <section id="kontakt" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-brand-orange font-bold text-sm uppercase tracking-wider">Bezpłatna Konsultacja</span>
+                    <h2 class="text-3xl sm:text-4xl font-black mt-2 mb-6">Skontaktuj się z nami</h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Chcesz zapapytać o dostępny termin lub omówić specyfikację budynku? Napisz do nas e-mail. Odpowiadamy sprawnie i przygotowujemy niezobowiązujące wyceny.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4 text-brand-orange border border-gray-700">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Adres e-mail do zapytań</p>
+                                <p class="text-lg font-bold text-white">bok@promirbud.eu</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4 text-brand-blue border border-gray-700">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Główny obszar świadczenia usług</p>
+                                <p class="text-lg font-bold text-white">Woj. Świętokrzyskie i ościenne</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formularz kontaktowy -->
+                <div class="bg-gray-800 p-8 rounded-3xl border border-gray-700 shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Napisz zapytanie</h3>
+                    <form onsubmit="event.preventDefault(); alert('Dziękujemy! Wiadomość została przygotowana do wysłania na bok@promirbud.eu');" class="space-y-4">
+                        <div>
+                            <label for="contact-name" class="block text-xs font-semibold text-gray-300 mb-1">Imię / Nazwisko lub Nazwa Firmy</label>
+                            <input type="text" id="contact-name" required class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white focus:border-brand-orange outline-none transition-all text-sm" placeholder="np. Jan Kowalski">
+                        </div>
+                        <div>
+                            <label for="contact-email" class="block text-xs font-semibold text-gray-300 mb-1">Twój Adres E-mail</label>
+                            <input type="email" id="contact-email" required class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white focus:border-brand-orange outline-none transition-all text-sm" placeholder="np. jan@dom.pl">
+                        </div>
+                        <div>
+                            <label for="contact-service" class="block text-xs font-semibold text-gray-300 mb-1">Interesująca usługa</label>
+                            <select id="contact-service" class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white focus:border-brand-orange outline-none transition-all text-sm">
+                                <option>Ocieplenie poddasza pianą PUR</option>
+                                <option>Izolacja fundamentów / posadzki</option>
+                                <option>Hydroizolacja polimocznikiem</option>
+                                <option>Inne / Doradztwo techniczne</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="contact-msg" class="block text-xs font-semibold text-gray-300 mb-1">Wiadomość (np. lokalizacja, metraż)</label>
+                            <textarea id="contact-msg" rows="3" class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white focus:border-brand-orange outline-none transition-all text-sm resize-none" placeholder="Opisz krótko swój projekt..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg transition-all">
+                            Wyślij Wiadomość
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka SEO -->
+    <footer class="bg-black text-gray-400 pt-16 pb-8 border-t border-gray-800 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <div>
+                    <a href="#" class="text-2xl font-black text-white tracking-tighter flex items-center mb-4">
+                        <span class="text-brand-orange mr-1">PRO</span>MIRBUD
+                    </a>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Specjalistyczne natryski pianą poliuretanową (PUR) oraz hydroizolacyjnymi powłokami polimocznikowymi na sprzęcie Komatz Hercules.
+                    </p>
+                    <p class="text-white font-bold">Kontakt: bok@promirbud.eu</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Nawigacja</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#hero" class="hover:text-white transition-colors">Strona Główna</a></li>
+                        <li><a href="#uslugi" class="hover:text-white transition-colors">Nasze Usługi</a></li>
+                        <li><a href="#technologia" class="hover:text-white transition-colors">Technologia Komatz</a></li>
+                        <li><a href="#kalkulator" class="hover:text-white transition-colors">Kalkulator Ceny</a></li>
+                        <li><a href="#kontakt" class="hover:text-white transition-colors">Darmowa Wycena</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Główne Usługi</h4>
+                    <ul class="space-y-2">
+                        <li>Ocieplanie poddaszy i strychów</li>
+                        <li>Izolacje fundamentów i posadzek</li>
+                        <li>Hydroizolacja dachów z papy</li>
+                        <li>Powłoki ochronne z polimocznika</li>
+                        <li>Ocieplenia hal i magazynów</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Obszar Działania SEO</h4>
+                    <p class="text-gray-400 mb-3">Dojazd i wycena w całym regionie świętokrzyskim:</p>
+                    <div class="flex flex-wrap gap-1.5 text-xs">
+                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded">Starachowice</span>
+                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded">Kielce</span>
+                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded">Skarżysko-Kamienna</span>
+                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded">Ostrowiec Św.</span>
+                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded">Sandomierz</span>
+                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded">Końskie</span>
+                        <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded">Busko-Zdrój</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-900 pt-6 text-center text-gray-600">
+                <p>&copy; 2026 Promirbud. Wszelkie prawa zastrzeżone. Izolacje natryskowe PUR i Polimocznik Świętokrzyskie.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Skrypty Interaktywne -->
+    <script>
+        // Logika Menu Mobilnego
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+
+        // Logika Kalkulatora
+        let purType = 'open'; 
+        let selectedService = 'pur'; 
+        let selectedThickness = 20; 
+
+        const basePrices = {
+            15: 85,
+            20: 95,
+            25: 110,
+            30: 125
+        };
+
+        const polyPrice = 220; 
+
+        function getPurUnitPrice() {
+            let base = basePrices[selectedThickness] || 95;
+            if (purType === 'closed') {
+                // +80% i zaokrąglenie w górę do pełnych 10 zł
+                return Math.ceil((base * 1.8) / 10) * 10;
+            }
+            return base;
+        }
+
+        function updateCalc() {
+            const areaInput = document.getElementById('calc-area');
+            const area = parseFloat(areaInput ? areaInput.value : 0) || 0;
+            
+            let unitPrice = 0;
+            let isRabatActive = false;
+
+            if (selectedService === 'pur') {
+                unitPrice = getPurUnitPrice();
+                if (area >= 90) {
+                    unitPrice -= 5;
+                    isRabatActive = true;
+                }
+            } else {
+                unitPrice = polyPrice;
+                isRabatActive = false;
+            }
+
+            const rabatInfo = document.getElementById('rabat-info');
+            if (rabatInfo) {
+                if (isRabatActive) {
+                    rabatInfo.classList.remove('hidden');
+                    rabatInfo.classList.add('flex');
+                } else {
+                    rabatInfo.classList.add('hidden');
+                    rabatInfo.classList.remove('flex');
+                }
+            }
+
+            const total = area * unitPrice;
+            const resultElement = document.getElementById('calc-result');
+            const unitPriceElement = document.getElementById('calc-unit-price');
+
+            if (resultElement) {
+                resultElement.textContent = total > 0 ? total.toLocaleString('pl-PL') + ' zł' : '0 zł';
+            }
+            if (unitPriceElement) {
+                unitPriceElement.textContent = total > 0 ? unitPrice.toLocaleString('pl-PL') + ' zł/m²' : '---';
+            }
+        }
+
+        function selectPurType(type) {
+            purType = type;
+            selectedService = 'pur';
+
+            document.getElementById('thickness-box').classList.remove('opacity-40', 'pointer-events-none');
+
+            document.querySelectorAll('.type-btn').forEach(btn => {
+                btn.className = 'type-btn bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-2.5 px-3 text-xs sm:text-sm font-bold hover:border-brand-orange transition-all';
+            });
+            
+            const activeBtn = document.getElementById('type-' + type);
+            if(activeBtn) {
+                activeBtn.className = 'type-btn bg-brand-orange border-2 border-brand-orange text-white rounded-xl py-2.5 px-3 text-xs sm:text-sm font-bold shadow-md transition-all';
+            }
+
+            const polyBtn = document.getElementById('poly-btn');
+            if(polyBtn) {
+                polyBtn.className = 'w-full bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-3 text-xs sm:text-sm font-bold hover:border-brand-blue transition-all';
+            }
+
+            updateCalc();
+        }
+
+        function selectThickness(th) {
+            selectedThickness = th;
+            selectedService = 'pur';
+
+            document.querySelectorAll('.th-btn').forEach(btn => {
+                btn.className = 'th-btn bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-2.5 text-xs sm:text-sm font-bold hover:border-brand-orange transition-all';
+            });
+
+            const activeBtn = document.getElementById('th-' + th);
+            if(activeBtn) {
+                activeBtn.className = 'th-btn bg-brand-orange border-2 border-brand-orange text-white rounded-xl py-2.5 text-xs sm:text-sm font-bold shadow-md transition-all';
+            }
+
+            const polyBtn = document.getElementById('poly-btn');
+            if(polyBtn) {
+                polyBtn.className = 'w-full bg-gray-800 border-2 border-gray-600 text-gray-300 rounded-xl py-3 text-xs sm:text-sm font-bold hover:border-brand-blue transition-all';
+            }
+
+            updateCalc();
+        }
+
+        function selectPoly() {
+            selectedService = 'poly';
+
+            document.querySelectorAll('.type-btn, .th-btn').forEach(btn => {
+                btn.className = btn.className.replace('bg-brand-orange border-brand-orange text-white', 'bg-gray-800 border-gray-600 text-gray-300');
+            });
+
+            const polyBtn = document.getElementById('poly-btn');
+            if(polyBtn) {
+                polyBtn.className = 'w-full bg-brand-blue border-2 border-brand-blue text-white rounded-xl py-3 text-xs sm:text-sm font-bold shadow-md transition-all';
+            }
+
+            updateCalc();
+        }
+
+        // Inicjalizacja przy załadowaniu
+        window.onload = function() {
+            updateCalc();
+        };
+    </script>
 </body>
 </html>
